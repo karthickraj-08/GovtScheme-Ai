@@ -5,7 +5,6 @@ from config.settings import settings
 
 class GeminiService:
     MODEL_CANDIDATES = (
-        "gemini-3.8-flash",
         "gemini-2.5-flash",
         "gemini-flash-latest",
     )

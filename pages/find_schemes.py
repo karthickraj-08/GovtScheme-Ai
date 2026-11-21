@@ -48,7 +48,11 @@ def render():
     if gemini_service.enabled:
         st.success("Gemini AI is configured.")
     else:
-        st.warning("Gemini AI is not configured yet. Enter GEMINI_API_KEY in the project `.env` file or Streamlit secrets.")
+        st.error(
+            "Gemini AI is not configured yet. In Streamlit Cloud open "
+            "Manage app > Settings > Secrets and set exactly: "
+            "GEMINI_API_KEY = \"<your-key>\". Save and reboot the app."
+        )
 
     existing = st.session_state.get("profile")
     def val(field, default=""):
